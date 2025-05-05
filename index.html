@@ -16,27 +16,31 @@
 
 <body>
 
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-white sticky-top shadow">
-        <div class="container">
+        <div class="container-fluid">
             <!-- Logo -->
-            <a class="navbar-brand" >
-                <img src="./img/1-removebg-preview.png" alt="Logo" >
+            <a class="navbar-brand">
+                <img src="./img/1-removebg-preview.png" alt="Logo">
             </a>
-
+    
+            <!-- Mobile Contact Info (hidden on desktop) -->
+            <div class="navbar-contact-mobile d-lg-none">
+                <a><i class="fa-solid fa-phone"></i> 9623344786</a>
+                <a><i class="fa-solid fa-envelope"></i> thesaniyaatar@gmail.com</a>
+            </div>
+    
             <!-- Navbar Toggler for Mobile View -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+    
             <!-- Navbar Links -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link active px-3" href="#">Home</a>
                     </li>
-                    
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Skills</a>
                     </li>
@@ -45,10 +49,10 @@
                     </li>
                 </ul>
             </div>
-
-            <!-- Contact Details -->
-            <div class="d-none d-lg-flex align-items-center">
-                <a class="nav-link me-3"><i class="fa-solid fa-phone"></i> 9850027087</a>
+    
+            <!-- Desktop Contact Details (hidden on mobile) -->
+            <div class="navbar-contact-desktop d-none d-lg-flex">
+                <a class="nav-link me-3"><i class="fa-solid fa-phone"></i> 9623344786</a>
                 <a class="nav-link me-3"><i class="fa-solid fa-envelope"></i> thesaniyaatar@gmail.com</a>
                 <a class="nav-link me-2" href="https://github.com/SaniyaAtar" target="_blank">
                     <i class="fa-brands fa-github"></i>
@@ -60,16 +64,21 @@
         </div>
     </nav>
   <!-- About Me Section -->
+<!-- About Me Section -->
 <section class="about-me py-5">
     <div class="container">
         <div class="row align-items-center">
- <div class="col-lg-5 text-center position-relative">
-    <!-- First Image (Positioned to the Left) -->
-    <img src="img/26.remini-enhanced.jpg" alt="Saniya Atar" class="profile-img img-fluid rounded-circle shadow-lg animate__animated animate__fadeInLeft" style="width: 250px; height: 250px; position: absolute; left: -50px; top: -200px;">
-    
-    <!-- Second Image (Positioned to the Right) -->
-    <img src="img/25.remini-enhanced.jpg" alt="Another Image" class="profile-img img-fluid rounded-circle shadow-lg animate__animated animate__fadeInRight" style="width: 300px; height: 350px; position: absolute; right: -10px;  top: -100px;">
-</div>
+            <div class="col-lg-5 position-relative">
+                <div class="profile-images-container">
+                    <!-- First Image -->
+                    <img src="img/26.remini-enhanced.jpg" alt="Saniya Atar" 
+                         class="profile-img profile-img-left animate__animated animate__fadeInLeft">
+                    
+                    <!-- Second Image -->
+                    <img src="img/25.remini-enhanced.jpg" alt="Another Image" 
+                         class="profile-img profile-img-right animate__animated animate__fadeInRight">
+                </div>
+            </div>
 
             <!-- Info & Resume Section -->
             <div class="col-lg-7 px-4 animate__animated animate__fadeInRight">
@@ -282,9 +291,37 @@
      
         <!-- Contact Section -->
         <section id="contact" class="container py-5 text-center">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:saniyaatar@example.com">saniyaatar@example.com</a></p>
-            <p>LinkedIn: <a href="#">linkedin.com/in/saniyaatar</a></p>
+            <div class="container">
+                <h1>Contact Me</h1>
+                
+                <div class="contact-info">
+                  <p>Feel free to reach out via email or connect with me on social media:</p>
+                  
+                  <p>
+                    <strong>Email:</strong> 
+                    <a href="mailto:thesaniyaatar@gmail.com" class="email-link">thesaniyaatar@gmail.com</a>
+                  </p>
+                  
+                  <p>
+                    <strong>Location:</strong> 
+                    Pandharpur, India
+                  </p>
+                </div>
+                
+                <div class="social-links">
+                  <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener noreferrer" >
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                  </a>
+                  
+                  <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" style="background: #333;">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  
+                  <!-- <a href="https://twitter.com/your-twitter-username" target="_blank" rel="noopener noreferrer" style="background: #1DA1F2;">
+                    <i class="fab fa-twitter"></i> Twitter
+                  </a> -->
+                </div>
+              </div>
         </section>
     
         <!-- Footer -->
